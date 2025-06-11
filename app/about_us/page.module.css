@@ -1,5 +1,165 @@
 .app {
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
+  background-color: #1a223f;
+  width: 100%;
+  height: 100%;
+  color: #c7d0e8;
+}
+
+.ourValuesSection {
+  padding: 2rem;
+  background-color: rgba(20, 24, 54, 0.85);
+  border-radius: 16px;
+}
+
+.valueBox {
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 2px 8px rgba(11, 15, 42, 0.2);
+}
+
+.valueBox h3 {
+  margin-top: 0;
+  color: #e0e7ff;
+}
+
+.valueBox p {
+  color: #8a94b8;
+}
+
+.ourValuesImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.ourValuesImageContainer img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+.ourCrewSection {
+  padding: 2rem;
+  background-color: rgba(20, 24, 54, 0.85);
+  border-radius: 16px;
+}
+
+.crewMember {
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 2px 8px rgba(11, 15, 42, 0.2);
+}
+
+.crewMember h3 {
+  margin-top: 0;
+  color: #e0e7ff;
+}
+
+.crewMember p {
+  color: #8a94b8;
+}
+
+.ourTeamImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.ourTeamImageContainer img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+.ourPartnersSection {
+  padding: 2rem;
+  background-color: rgba(20, 24, 54, 0.85);
+  border-radius: 16px;
+}
+
+.partnerIntro {
+  opacity: 0;
+  animation: fadeInText 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+.partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: stretch;
+  justify-items: center;
+}
+
+/* All logos start invisible */
+.partnerLogos {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInLogo 0.6s ease forwards;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeInLogo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay each logo slightly */
+.delay0 {
+  animation-delay: 1s;
+}
+.delay1 {
+  animation-delay: 1.2s;
+}
+.delay2 {
+  animation-delay: 1.4s;
+}
+.delay3 {
+  animation-delay: 1.6s;
+}
+.delay4 {
+  animation-delay: 1.8s;
+}
+.delay5 {
+  animation-delay: 2s;
+}
+.delay6 {
+  animation-delay: 2.2s;
+}
+.delay7 {
+  animation-delay: 2.4s;
 }
