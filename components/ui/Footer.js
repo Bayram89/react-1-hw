@@ -3,7 +3,10 @@
 import Link from "next/link";
 
 import { usePathname } from "next/navigation";
+
 import styles from "./Footer.module.css";
+
+import { SocialMediaItem } from "./SocialMediaItem";
 
 export const Footer = () => {
   const path = usePathname().split("?")[0];
@@ -51,76 +54,31 @@ export const Footer = () => {
       <div className={styles.footerLinks}>
         <h3>Follow us</h3>
         <ul className={styles.footerList}>
-          <li>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png"
-                alt="Facebook"
-                style={{ width: 20, height: 20, marginRight: 8 }}
-              />
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/018/930/415/non_2x/instagram-logo-instagram-icon-transparent-free-png.png"
-                alt="Instagram"
-                style={{ width: 20, height: 20, marginRight: 8 }}
-              />
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://tiktok.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://img.freepik.com/premium-vector/tiktok-app-icon-logo-social-media-engagement_1293861-103.jpg"
-                alt="Tiktok"
-                style={{ width: 20, height: 20, marginRight: 8 }}
-              />
-              TikTok
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
-                alt="LinkedIn"
-                style={{ width: 20, height: 20, marginRight: 8 }}
-              />
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://static-00.iconduck.com/assets.00/google-icon-2048x2026-etldt9h8.png"
-                alt="Google"
-                style={{ width: 20, height: 20, marginRight: 8 }}
-              />
-              Google
-            </a>
-          </li>
+          <SocialMediaItem
+            url="https://facebook.com"
+            title="Facebook"
+            icon="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png"
+          />
+          <SocialMediaItem
+            url="https://instagram.com"
+            title="Instagram"
+            icon="https://static.vecteezy.com/system/resources/previews/018/930/415/non_2x/instagram-logo-instagram-icon-transparent-free-png.png"
+          />
+          <SocialMediaItem
+            url="https://tiktok.com"
+            title="TikTok"
+            icon="https://img.freepik.com/premium-vector/tiktok-app-icon-logo-social-media-engagement_1293861-103.jpg"
+          />
+          <SocialMediaItem
+            url="https://linkedin.com"
+            title="LinkedIn"
+            icon="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
+          />
+          <SocialMediaItem
+            url="https://google.com"
+            title="Google"
+            icon="https://static-00.iconduck.com/assets.00/google-icon-2048x2026-etldt9h8.png"
+          />
           {/* TASK - React 1 week 2 */}
           {/* Create a <SocialMediaItem /> component and replace all of the list items! */}
           {/* it should accept the following props */}
