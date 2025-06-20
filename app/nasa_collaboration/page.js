@@ -45,7 +45,22 @@ export const NasaCollaboration = () => {
           {/* After fetching data from the NASA_URLs.astronomyPicOfTheDay url, display the returned data here */}
           {/* You should display the title, explanation, and the image using the url from the response */}
           {/* <img src={dailyImg.url}> */}
+          {/* DONE */}
+          {dailyImg?.url ? (
+            <>
+              <h3>{dailyImg.title}</h3>
+              <img
+                className={styles.nasaPicOfTheDayImg}
+                src={dailyImg.url}
+                alt={dailyImg.title}
+              />
+              <p>{dailyImg.explanation}</p>
+            </>
+          ) : (
+            <p>Loading picture of the day...</p>
+          )}
         </section>
+
         <section className="card">
           <h2>Rover Photos</h2>
           {/* TASK - React 1 week 3 */}
