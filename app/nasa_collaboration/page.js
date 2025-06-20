@@ -5,7 +5,7 @@ import styles from './page.module.css';
 
 // Read "/app/nasa_collaboration/README.md" for more info about the API_KEY
 // You need a proper API_KEY for the requests to work
-const API_KEY = 'API_KEY';
+const API_KEY = 'h4Kf953HHtDP77VVdvtJV7TisdZlWWmX9ZwkEpWg';
 
 const NASA_URLs = {
   astronomyPicOfTheDay: `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`,
