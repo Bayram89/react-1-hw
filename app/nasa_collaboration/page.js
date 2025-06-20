@@ -22,10 +22,17 @@ export const NasaCollaboration = () => {
       setRoverPhoto(roverPhotoResponse);
     };
 
+    const fetchAstronomyPic = async () => {
+    const dailyImgResponse = await fetch(NASA_URLs.astronomyPicOfTheDay).then(res => res.json());
+    setDailyImg(dailyImgResponse);
+    };
+
     fetchRoverPhotos();
+    fetchAstronomyPic();
 
     // TASK - React 1 week 3 
     // fetch the extra data for NASA_URLs.astronomyPicOfTheDay and save it to the dailyImg state variable
+    // DONE
   }, []);
 
   return (
