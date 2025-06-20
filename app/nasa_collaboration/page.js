@@ -5,6 +5,7 @@ import styles from './page.module.css';
 
 // Read "/app/nasa_collaboration/README.md" for more info about the API_KEY
 // You need a proper API_KEY for the requests to work
+// DONE
 const API_KEY = 'h4Kf953HHtDP77VVdvtJV7TisdZlWWmX9ZwkEpWg';
 
 const NASA_URLs = {
@@ -39,6 +40,7 @@ export const NasaCollaboration = () => {
     <div className="fullBGpicture">
       <main className="mainContent">
         <h1>Collaboration with NASA</h1>
+
         <section className="card">
           <h2>Astronomy Picture of the day</h2>
           {/* TASK - React 1 week 3 */}
@@ -65,8 +67,8 @@ export const NasaCollaboration = () => {
           <h2>Rover Photos</h2>
           {/* TASK - React 1 week 3 */}
           {/* Iteratate over the roverPhoto?.photos array and display all the pictures! */}
-          {
-            roverPhoto?.photos?.length ? (
+          {/* DONE */}
+            {roverPhoto?.photos?.length ? (
               <>
                 {/* TASK - React 1 week 3 */}
                 {/* Create a react component for the <RoverPhoto />, which should accept the following props */}
@@ -78,17 +80,21 @@ export const NasaCollaboration = () => {
                 {/* If you don't know how the data looks like you can: */}
                 {/* 1. use console.log() to write the data to the console */}
                 {/* 2. use the network tab in the developer tab - https://developer.chrome.com/docs/devtools/network */}
-                <p>Date {roverPhoto.photos[0]?.earth_date}</p>
-                <img className={styles.nasaPicOfTheDayImg} src={roverPhoto.photos[0]?.img_src} alt={dailyImg.title} />
-              </>
+                <p>Date {roverPhoto.photos[0].earth_date}</p>
+                <div className={styles.roverPhotosGrid}>
+                  {roverPhoto.photos.map((photo) => (
+                    <img key={photo.id} src={photo.img_src} alt={ `Rover photo from ${photo.earth_date}`} className={styles.roverPhotoImg}
+                    />
+                  ))}
+                </div>
+                </>
               ) : (
                 <p>Loading rover photos...</p>
-              )
-            }
+              )}
         </section>
       </main>
     </div>
   );
-}
+};
 
 export default NasaCollaboration;
