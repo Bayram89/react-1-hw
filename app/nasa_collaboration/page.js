@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
+import { RoverPhoto } from '/components/ui/RoverPhoto';
 
 // Read "/app/nasa_collaboration/README.md" for more info about the API_KEY
 // You need a proper API_KEY for the requests to work
@@ -75,6 +76,7 @@ export const NasaCollaboration = () => {
                 {/* 1. src: source of the img (img_src in the data from the API) */}
                 {/* 2. date: earth_date data coming from the API */}
                 {/* 3. roverName: will be in the rover object - rover.name */}
+                {/* DONE */}
 
                 {/* TIPS: */}
                 {/* If you don't know how the data looks like you can: */}
@@ -83,7 +85,8 @@ export const NasaCollaboration = () => {
                 <p>Date {roverPhoto.photos[0].earth_date}</p>
                 <div className={styles.roverPhotosGrid}>
                   {roverPhoto.photos.map((photo) => (
-                    <img key={photo.id} src={photo.img_src} alt={ `Rover photo from ${photo.earth_date}`} className={styles.roverPhotoImg}
+                    <RoverPhoto
+                    key={photo.id} src={photo.img_src} date={photo.earth_date} roverName={photo.rover.name}
                     />
                   ))}
                 </div>
