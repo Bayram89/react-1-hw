@@ -7,7 +7,7 @@ import { RoverPhoto } from '/components/ui/RoverPhoto';
 // Read "/app/nasa_collaboration/README.md" for more info about the API_KEY
 // You need a proper API_KEY for the requests to work
 // DONE
-const API_KEY = 'h4Kf953HHtDP77VVdvtJV7TisdZlWWmX9ZwkEpWg';
+const API_KEY = process.env.NEXT_PUBLIC_NASA_API_KEY || 'DEMO_KEY';
 
 const NASA_URLs = {
   astronomyPicOfTheDay: `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`,
