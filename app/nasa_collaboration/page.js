@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import { RoverPhoto } from '/components/ui/RoverPhoto';
+import AddWishlistItem from '/components/destination/AddWishlistItem';
 
 // Read "/app/nasa_collaboration/README.md" for more info about the API_KEY
 // You need a proper API_KEY for the requests to work
@@ -55,7 +56,7 @@ export const NasaCollaboration = () => {
               <img
                 className={styles.nasaPicOfTheDayImg}
                 src={dailyImg.url}
-                alt={dailyImg.title}
+                alt={`Daily Rover Photo ${dailyImg.title}`}
               />
               <p>{dailyImg.explanation}</p>
             </>
